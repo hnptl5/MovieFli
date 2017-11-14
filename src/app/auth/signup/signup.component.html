@@ -1,0 +1,62 @@
+<div class="container">
+  <form (ngSubmit)="onSignup(signupForm)" #signupForm="ngForm">
+    <h2 class="form-signup-heading">Register</h2>
+    <!--<div class="form-group">-->
+      <!--<label for="firstname" class="sr-only">FirstName</label>-->
+      <!--<input type="text"-->
+             <!--id="firstname"-->
+             <!--name="firstname"-->
+             <!--class="form-control"-->
+             <!--placeholder="FirstName"-->
+             <!--required [(ngModel)]="user.firstname">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+      <!--<label for="lastname"-->
+             <!--class="sr-only">LastName</label>-->
+      <!--<input type="text"-->
+             <!--class="form-control"-->
+             <!--id="lastname"-->
+             <!--name="lastname"-->
+             <!--placeholder="LastName"-->
+             <!--required [(ngModel)]="user.lastname">-->
+    <!--</div>-->
+    <div class="form-group">
+      <label for="email"
+             class="sr-only">Email</label>
+      <input type="email"
+             class="form-control"
+             id="email"
+             placeholder="Email"
+             name="email"
+             required
+             ngModel>
+    </div>
+    <!--<div class="form-group">-->
+      <!--<label for="username"-->
+             <!--class="sr-only">Username</label>-->
+      <!--<input type="username"-->
+             <!--class="form-control"-->
+             <!--id="username"-->
+             <!--placeholder="UserName"-->
+             <!--name="username"-->
+             <!--required [(ngModel)]="user.username">-->
+    <!--</div>-->
+    <div class="form-group">
+      <label for="password"
+             class="sr-only">Password</label>
+      <input type="password"
+             class="form-control"
+             name="password"
+             id="password"
+             placeholder="Password"
+             required
+             ngModel>
+    </div>
+    <div>
+      <button class="btn btn-primary" [disabled]="signupForm.form.invalid">Sign up</button>
+      <button class="btn btn-danger"
+              (click)="onClick()">Cancel
+      </button>
+    </div>
+  </form>
+</div>

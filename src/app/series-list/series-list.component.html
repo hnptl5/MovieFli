@@ -1,0 +1,44 @@
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>FirstName</th>-->
+<!--<th>LastName</th>-->
+<!--<th>profilePic</th>-->
+<!--</tr>-->
+<!--</thead>-->
+
+<!--<tbody>-->
+<!--<tr *ngFor="let user of userList">-->
+<!--<td>{{user.firstName}}</td>-->
+<!--<td>{{user.lastName}}</td>-->
+<!--<td><img [src]="user.profilePic"></td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+
+<!--<div id="display_dialog">-->
+  <!--<table>-->
+    <!--<tr *ngFor="let series of seriesList">-->
+      <!--<td>-->
+        <!--<img [src]="series.poster">-->
+      <!--</td>-->
+      <!--<td>-->
+        <!--<div class="title">{{series.title}}({{series.year}})</div>-->
+        <!--<div class="rating">{{series.imdbRating}}/10 <u>Metascore: </u>{{series.metaScore}}/100</div>-->
+        <!--<div class="duration"><u>Duration: </u>{{series.runtime}} - {{series.genre}}</div>-->
+        <!--<div class="plot">{{series.plot}}</div>-->
+        <!--<div class="directors"><u>Directors: </u> {{series.director}}</div>-->
+        <!--<div class="stars"><u>Stars: </u> {{series.actors}}</div>-->
+      <!--</td>-->
+    <!--</tr>-->
+  <!--</table>-->
+<!--</div>-->
+
+
+<div class="row">
+  <a href="#" *ngFor="let series of seriesList" routerLink="series-detail">
+    <img [src]=" series.poster" (click)="onSelect()">
+  </a>
+</div>
+

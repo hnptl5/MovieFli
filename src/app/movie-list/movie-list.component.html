@@ -1,0 +1,34 @@
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Title</th>-->
+<!--<th>Year</th>-->
+<!--<th>Actors</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr *ngFor="let movie of movieList">-->
+<!--<td>{{movie.title}}</td>-->
+<!--<td>{{movie.actors}}</td>-->
+<!--<td>{{movie.year}}</td>-->
+<!--<td><img [src]="movie.poster"></td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<div class="row">
+  <a href="#" *ngFor="let movie of movieList" routerLink="/movie-detail">
+    <img [src]=" movie.poster" (click)="onSelect()">
+  </a>
+
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link">Previous</a  ></li>
+    <li class="page-item"><a class="page-link" routerLink="movies">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
